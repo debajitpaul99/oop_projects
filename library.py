@@ -10,6 +10,21 @@ class Book:
         self.__title = title
         self.__author = author
         self.__availability = availability
+    @property
+    def book_id(self):
+        return self.__book_id
+    @property
+    def title(self):
+        return self.__title
+    @property
+    def author(self):
+        return self.__author
+    @property
+    def availability(self):
+        return self.__availability
+    @availability.setter
+    def availability(self, is_available):
+        self.__availability = is_available
     def borrow_book(self,given_id):
         if self.book_id == given_id:
             if self.availability:
